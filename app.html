@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskFlow - Todo Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <h1 class="app-title">My Todo App</h1>
+        <div class="user-info">
+            <img id="userAvatar" class="user-avatar" src="" alt="User Avatar">
+            <span id="userName" class="user-name"></span>
+            <button id="signOutBtn" class="sign-out-btn">Sign Out</button>
+        </div>
+    </header>
+
+    <div class="main-container">
+        <div class="stage-tabs">
+            <button class="stage-tab active" data-stage="todo">
+                Todo <span id="todoCounter" class="task-counter">0</span>
+            </button>
+            <button class="stage-tab" data-stage="completed">
+                Completed <span id="completedCounter" class="task-counter">0</span>
+            </button>
+            <button class="stage-tab" data-stage="archived">
+                Archived <span id="archivedCounter" class="task-counter">0</span>
+            </button>
+        </div>
+
+        <div class="task-input-section">
+            <form id="taskForm" class="task-input-form">
+                <input 
+                    type="text" 
+                    id="taskInput" 
+                    class="task-input" 
+                    placeholder="Add your task"
+                    required
+                >
+                <button type="submit" class="add-task-btn">Submit</button>
+            </form>
+        </div>
+
+        <div id="tasksContainer" class="tasks-container">
+            <div class="loading">Loading tasks...</div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
